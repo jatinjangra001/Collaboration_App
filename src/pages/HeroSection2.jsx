@@ -46,7 +46,7 @@ const HeroSection2 = () => {
         (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
       );
       setIsSliding(false);
-    }, 500); // Match this duration with your CSS animation duration
+    }, 500);
   };
 
   const handleNextSlide = () => {
@@ -55,7 +55,7 @@ const HeroSection2 = () => {
     setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
       setIsSliding(false);
-    }, 500); // Match this duration with your CSS animation duration
+    }, 500);
   };
 
   return (
