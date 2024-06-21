@@ -71,6 +71,32 @@
   border-radius: 5px;
 }
 
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Hide overflow to prevent image overflow */
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Smooth transition effect */
+}
+
+.slide {
+  flex: 0 0 100%; /* Each image takes 100% of the container width */
+  height: auto; /* Adjust height as needed */
+
+  /* object-fit: cover; */
+  opacity: 1; /* Initially set opacity to 1 for smooth transition */
+  /* transition: opacity 0.5s ease-in-out; Opacity transition for fade effect */
+}
+
+/* Styles for sliding animation */
+.sliding .slide {
+  opacity: 0; /* Set opacity to 0 during sliding transition */
+}
+
 /* Custom CSS to hide scrollbars */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
